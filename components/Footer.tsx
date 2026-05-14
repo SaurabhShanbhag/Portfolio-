@@ -8,7 +8,7 @@ export function Footer() {
         <div className="min-w-0 max-w-full md:max-w-md">
           <h3 className="font-display text-xl text-white">Saurabh Shanbhag</h3>
           <p className="mt-1 text-sm text-white/50">
-            MBA Student · UI/UX Designer · Web Developer
+            MBA Student · E-commerce & Growth Analyst · UI/UX Designer · Web Developer · Quality Control Analyst
           </p>
           <p className="mt-5 text-sm leading-relaxed break-words text-white/45">
             Bengaluru-based — building thoughtful interfaces and web experiences

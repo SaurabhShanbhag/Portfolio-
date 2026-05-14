@@ -56,53 +56,77 @@ export function HorizontalCardScroller({ variant, cards }: HorizontalCardScrolle
     maxHeight: `${cards.length * 120}px`,
   } as const;
 
-  const renderCard = (card: Card, idx: number, fullWidthMobile: boolean) => (
-    <div
-      key={idx}
-      className={`${fullWidthMobile ? `w-full ${cardHeight}` : `${cardWidth} ${cardHeight}`} flex-shrink-0 rounded-2xl overflow-hidden bg-surface border border-border hover:scale-[1.02] transition-transform duration-300 cursor-pointer flex flex-col`}
-    >
-      <div className={`${imageHeight} relative flex-shrink-0 w-full overflow-hidden bg-gray-200`}>
-        {variant === 'work' ? (
-          <img
-            src={card.image}
-            alt={card.title}
-            className="w-full h-full object-cover"
-          />
-        ) : (
-          <Image
-            src={card.image}
-            alt={card.title}
-            fill
-            className="object-cover"
-          />
-        )}
-      </div>
+  const renderCard = (card: Card, idx: number, fullWidthMobile: boolean) => {
+    const isCompactCard = variant === 'poster' || variant === 'travel';
 
-      <div className="bg-surface px-5 py-4 flex flex-col justify-between flex-1 min-h-0">
-        <div className="min-w-0">
-          <h3 className="font-display text-lg text-ink leading-snug">
-            {card.title}
-          </h3>
-          {(card.description || card.caption) && (
-            <p className="font-body text-sm text-ink2 mt-1 leading-relaxed">
-              {card.description || card.caption}
-            </p>
+    const cardShellClass = [
+      fullWidthMobile ? 'w-full' : cardWidth,
+      isCompactCard ? '' : cardHeight,
+      'flex-shrink-0 rounded-2xl overflow-hidden bg-surface border border-border',
+      'hover:scale-[1.02] transition-transform duration-300 cursor-pointer flex flex-col',
+    ]
+      .filter(Boolean)
+      .join(' ');
+
+    return (
+      <div key={idx} className={cardShellClass}>
+        {variant === 'work' ? (
+          <div className={`${imageHeight} relative flex-shrink-0 w-full overflow-hidden bg-gray-200`}>
+            <img
+              src={card.image}
+              alt={card.title}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ) : (
+          <div className="relative w-full shrink-0 aspect-[4/5] overflow-hidden">
+            <Image
+              src={card.image}
+              alt={card.title}
+              fill
+              className="object-cover"
+            />
+          </div>
+        )}
+
+        <div
+          className={
+            isCompactCard
+              ? 'bg-surface p-4 flex flex-col gap-1'
+              : 'bg-surface px-5 py-4 flex flex-col justify-between flex-1 min-h-0'
+          }
+        >
+          <div className={`min-w-0 ${isCompactCard ? 'flex flex-col gap-1' : ''}`}>
+            <h3 className="font-display text-lg text-ink leading-snug">
+              {card.title}
+            </h3>
+            {(card.description || card.caption) && (
+              <p
+                className={`font-body text-sm text-ink2 leading-relaxed ${
+                  isCompactCard ? '' : 'mt-1'
+                }`}
+              >
+                {card.description || card.caption}
+              </p>
+            )}
+          </div>
+
+          {card.link && card.linkLabel && (
+            <a
+              href={card.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-accent text-sm font-medium hover:underline inline-flex items-center gap-1 w-fit ${
+                isCompactCard ? 'mt-2' : 'mt-3'
+              }`}
+            >
+              {card.linkLabel} <span>→</span>
+            </a>
           )}
         </div>
-
-        {card.link && card.linkLabel && (
-          <a
-            href={card.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent text-sm font-medium hover:underline mt-3 inline-flex items-center gap-1 w-fit"
-          >
-            {card.linkLabel} <span>→</span>
-          </a>
-        )}
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <>
