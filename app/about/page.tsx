@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SectionHeading } from "@/components/SectionHeading";
 import { TimelineItem } from "@/components/TimelineItem";
 import { HorizontalCardScroller } from "@/components/HorizontalCardScroller";
+import { publicFile } from "@/lib/siteBasePath";
 
 export const metadata: Metadata = {
   title: "About — Saurabh Shanbhag",
@@ -47,7 +48,7 @@ export default function AboutPage() {
             {/* LEFT: Photo */}
             <div className="flex items-start">
               <Image
-                src="/images/about-photo.jpg"
+                src={publicFile("/images/about-photo.jpg")}
                 width={480}
                 height={560}
                 alt="Saurabh Shanbhag"
@@ -219,32 +220,32 @@ export default function AboutPage() {
           variant="travel"
           cards={[
             {
-              image: "/images/travel/travel-1.jpg",
+              image: publicFile("/images/travel/travel-1.jpg"),
               title: "Travel",
               caption: "Exploring India",
             },
             {
-              image: "/images/travel/travel-2.jpg",
+              image: publicFile("/images/travel/travel-2.jpg"),
               title: "Travel",
               caption: "Mountains & Treks",
             },
             {
-              image: "/images/travel/travel-3.jpg",
+              image: publicFile("/images/travel/travel-3.jpg"),
               title: "Travel",
               caption: "Coastal Karnataka",
             },
             {
-              image: "/images/travel/travel-4.jpg",
+              image: publicFile("/images/travel/travel-4.jpg"),
               title: "Travel",
               caption: "Heritage Sites",
             },
             {
-              image: "/images/travel/travel-5.jpg",
+              image: publicFile("/images/travel/travel-5.jpg"),
               title: "Travel",
               caption: "Nature & Wildlife",
             },
             {
-              image: "/images/travel/travel-6.jpg",
+              image: publicFile("/images/travel/travel-6.jpg"),
               title: "Travel",
               caption: "City Walks",
             },

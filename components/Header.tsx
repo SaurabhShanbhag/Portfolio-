@@ -53,15 +53,15 @@ export function Header() {
             </Link>
           ))}
 
-          {/* Resume button */}
-          <a
+          {/* Resume button — Link so basePath applies on static / GitHub Pages */}
+          <Link
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="border-[1.5px] border-accent text-accent text-[0.7rem] tracking-[0.08em] px-4 py-1.5 rounded-full hover:bg-accent hover:text-white transition-all duration-200"
           >
             Resume
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile / tablet menu */}
@@ -104,7 +104,7 @@ export function Header() {
           ))}
 
           {/* Resume in mobile menu */}
-          <a
+          <Link
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -112,7 +112,7 @@ export function Header() {
             className="m-3 inline-block rounded-full border-[1.5px] border-accent px-4 py-1.5 text-center text-xs tracking-wide text-accent transition-all duration-200 hover:bg-accent hover:text-white"
           >
             Resume
-          </a>
+          </Link>
         </div>
       )}
     </header>

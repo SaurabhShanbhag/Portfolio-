@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/SectionHeading";
 import { HorizontalCardScroller } from "@/components/HorizontalCardScroller";
+import { publicFile } from "@/lib/siteBasePath";
 
 export const metadata: Metadata = {
   title: "Saurabh Shanbhag — Portfolio",
@@ -75,7 +76,7 @@ export default function Home() {
 
                 {/* Image */}
                 <Image
-                  src="/images/profile.jpg"
+                  src={publicFile("/images/profile.jpg")}
                   fill
                   className="object-cover rounded-full"
                   alt="Saurabh Shanbhag"
@@ -154,7 +155,7 @@ export default function Home() {
             <div className="group flex h-full min-h-0 cursor-pointer flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent">
               <div className="relative aspect-[4/3] overflow-hidden bg-surface2">
                 <Image
-                  src="/images/certifications/certificate-1.jpg"
+                  src={publicFile("/images/certifications/certificate-1.jpg")}
                   alt="Google UX Design Certificate"
                   fill
                   className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
@@ -189,7 +190,7 @@ export default function Home() {
             <div className="group flex h-full min-h-0 cursor-pointer flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent">
               <div className="relative aspect-[4/3] overflow-hidden bg-surface2">
                 <Image
-                  src="/images/certifications/certificate-2.jpg"
+                  src={publicFile("/images/certifications/certificate-2.jpg")}
                   alt="Foundations of Digital Marketing & E-commerce Certificate"
                   fill
                   className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
@@ -224,7 +225,7 @@ export default function Home() {
             <div className="group flex h-full min-h-0 cursor-pointer flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent">
               <div className="relative aspect-[4/3] overflow-hidden bg-surface2">
                 <Image
-                  src="/images/certifications/certificate-3.jpg"
+                  src={publicFile("/images/certifications/certificate-3.jpg")}
                   alt="Digital Transformation Certificate"
                   fill
                   className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
@@ -259,7 +260,7 @@ export default function Home() {
             <div className="group flex h-full min-h-0 cursor-pointer flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent">
               <div className="relative aspect-[4/3] overflow-hidden bg-surface2">
                 <Image
-                  src="/images/certifications/certificate-4.jpg"
+                  src={publicFile("/images/certifications/certificate-4.jpg")}
                   alt="Full-Stack Web Development Bootcamp Certificate"
                   fill
                   className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
@@ -294,7 +295,7 @@ export default function Home() {
             <div className="group flex h-full min-h-0 cursor-pointer flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent">
               <div className="relative aspect-[4/3] overflow-hidden bg-surface2">
                 <Image
-                  src="/images/certifications/certificate-5.jpg"
+                  src={publicFile("/images/certifications/certificate-5.jpg")}
                   alt="Java Programming Certificate"
                   fill
                   className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
@@ -329,7 +330,7 @@ export default function Home() {
             <div className="group flex h-full min-h-0 cursor-pointer flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent">
               <div className="relative aspect-[4/3] overflow-hidden bg-surface2">
                 <Image
-                  src="/images/certifications/certificate-6.jpg"
+                  src={publicFile("/images/certifications/certificate-6.jpg")}
                   alt="Centre for Sustainability & Business Certificate"
                   fill
                   className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
@@ -376,42 +377,42 @@ export default function Home() {
           variant="work"
           cards={[
             {
-              image: "/images/work/ayush.gif",
+              image: publicFile("/images/work/ayush.gif"),
               title: "Ayush Wellness Clinic",
               description: "Healthcare website with appointment booking UI",
               link: "http://ayushwellnessclinic.com",
               linkLabel: "Visit Site",
             },
             {
-              image: "/images/work/hueb.gif",
+              image: publicFile("/images/work/hueb.gif"),
               title: "Hueb",
               description: "Luxury jewelry brand website",
               link: "http://hueb.com",
               linkLabel: "Visit Site",
             },
             {
-              image: "/images/work/hans.gif",
+              image: publicFile("/images/work/hans.gif"),
               title: "Hans Naturals",
               description: "Natural products e-commerce website",
               link: "http://hansnaturals.com",
               linkLabel: "Visit Site",
             },
             {
-              image: "/images/work/damodar.gif",
+              image: publicFile("/images/work/damodar.gif"),
               title: "Damodar IT Solutions",
               description: "Corporate website for IT solutions firm",
               link: "https://damodaritsolutions.com",
               linkLabel: "Visit Site",
             },
             {
-              image: "/images/work/soapaloop.gif",
+              image: publicFile("/images/work/soapaloop.gif"),
               title: "Soapaloop",
               description: "Artisan soap brand website",
               link: "https://soapaloop.com",
               linkLabel: "Visit Site",
             },
             {
-              image: "/images/work/lmchm.gif",
+              image: publicFile("/images/work/lmchm.gif"),
               title: "LMCHM",
               description: "Institutional website",
               link: "http://lmchm.in",
@@ -434,42 +435,42 @@ export default function Home() {
           variant="poster"
           cards={[
             {
-              image: "/images/posters/poster-1.jpg",
+              image: publicFile("/images/posters/poster-1.jpg"),
               title: "Poster Design 1",
               caption: "Graphic design work",
             },
             {
-              image: "/images/posters/poster-2.jpg",
+              image: publicFile("/images/posters/poster-2.jpg"),
               title: "Poster Design 2",
               caption: "Visual communication",
             },
             {
-              image: "/images/posters/poster-3.jpg",
+              image: publicFile("/images/posters/poster-3.jpg"),
               title: "Poster Design 3",
               caption: "Brand identity",
             },
             {
-              image: "/images/posters/poster-4.jpg",
+              image: publicFile("/images/posters/poster-4.jpg"),
               title: "Poster Design 4",
               caption: "Event poster",
             },
             {
-              image: "/images/posters/poster-5.jpg",
+              image: publicFile("/images/posters/poster-5.jpg"),
               title: "Poster Design 5",
               caption: "Marketing collateral",
             },
             {
-              image: "/images/posters/poster-6.jpg",
+              image: publicFile("/images/posters/poster-6.jpg"),
               title: "Poster Design 6",
               caption: "Digital design",
             },
             {
-              image: "/images/posters/poster-7.jpg",
+              image: publicFile("/images/posters/poster-7.jpg"),
               title: "Poster Design 7",
               caption: "Social media creative",
             },
             {
-              image: "/images/posters/poster-8.jpg",
+              image: publicFile("/images/posters/poster-8.jpg"),
               title: "Poster Design 8",
               caption: "Promotional design",
             },
