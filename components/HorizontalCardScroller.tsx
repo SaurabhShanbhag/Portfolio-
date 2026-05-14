@@ -52,8 +52,8 @@ export function HorizontalCardScroller({ variant, cards }: HorizontalCardScrolle
   const cardHeight = 'h-[440px] md:h-[480px]';
 
   const sectionHeightStyle = {
-    height: `calc(${cards.length * 55}vw)`,
-    maxHeight: `${cards.length * 500}px`,
+    height: `calc(${cards.length * 12}vw)`,
+    maxHeight: `${cards.length * 120}px`,
   } as const;
 
   const renderCard = (card: Card, idx: number, fullWidthMobile: boolean) => (
