@@ -22,6 +22,8 @@ export function HorizontalCardScroller({ variant, cards }: HorizontalCardScrolle
   const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Skip scroll animation for travel variant
+    if (variant === 'travel') return;
     if (typeof window === 'undefined' || window.innerWidth < 768) return;
 
     const handleScroll = () => {
@@ -45,7 +47,7 @@ export function HorizontalCardScroller({ variant, cards }: HorizontalCardScrolle
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [variant]);
 
   const imageHeight = 'h-[264px] md:h-[288px]';
   const cardWidth = 'w-[360px] md:w-[380px]';
@@ -130,29 +132,46 @@ export function HorizontalCardScroller({ variant, cards }: HorizontalCardScrolle
 
   return (
     <>
-      {/* Desktop / tablet: pinned horizontal scroll — tall runway only here */}
-      <div
-        ref={sectionRef}
-        style={sectionHeightStyle}
-        className="relative z-0 hidden w-full overflow-x-hidden md:block"
-      >
-        <div className="sticky top-[68px] z-0 flex h-[calc(100vh-68px)] items-center overflow-hidden pointer-events-auto">
-          <div
-            ref={trackRef}
-            className="absolute flex flex-row gap-6 px-6 will-change-transform"
-            style={{ transition: 'transform 0.08s ease-out' }}
-          >
-            {cards.map((card, idx) => renderCard(card, idx, false))}
+      {variant === 'travel' ? (
+        // Travel: Normal horizontal carousel/slider
+        <div className="relative z-0 w-full overflow-x-hidden">
+          <div className="overflow-x-auto snap-x snap-mandatory scrollbar-hide py-6">
+            <div className="flex flex-row gap-6 px-6 w-fit">
+              {cards.map((card, idx) => (
+                <div key={idx} className="snap-start">
+                  {renderCard(card, idx, false)}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <>
+          {/* Desktop / tablet: pinned horizontal scroll — tall runway only here */}
+          <div
+            ref={sectionRef}
+            style={sectionHeightStyle}
+            className="relative z-0 hidden w-full overflow-x-hidden md:block"
+          >
+            <div className="sticky top-[68px] z-0 flex h-[calc(100vh-68px)] items-center overflow-hidden pointer-events-auto">
+              <div
+                ref={trackRef}
+                className="absolute flex flex-row gap-6 px-6 will-change-transform"
+                style={{ transition: 'transform 0.08s ease-out' }}
+              >
+                {cards.map((card, idx) => renderCard(card, idx, false))}
+              </div>
+            </div>
+          </div>
 
-      {/* Mobile: natural document height (no vw runway — avoids footer / overlap issues) */}
-      <div className="relative z-0 w-full min-w-0 overflow-x-hidden py-8 md:hidden">
-        <div className="mx-auto flex max-w-6xl flex-col gap-5 px-6">
-          {cards.map((card, idx) => renderCard(card, idx, true))}
-        </div>
-      </div>
+          {/* Mobile: natural document height (no vw runway — avoids footer / overlap issues) */}
+          <div className="relative z-0 w-full min-w-0 overflow-x-hidden py-8 md:hidden">
+            <div className="mx-auto flex max-w-6xl flex-col gap-5 px-6">
+              {cards.map((card, idx) => renderCard(card, idx, true))}
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 }

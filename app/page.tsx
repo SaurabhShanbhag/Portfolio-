@@ -115,7 +115,7 @@ export default function Home() {
               <div className="flex flex-col gap-4">
                 {/* Stat Card 1 */}
                 <div className="bg-white border border-border rounded-2xl px-6 py-5 hover:border-accent transition-colors">
-                  <p className="font-display text-4xl text-accent">2+</p>
+                  <p className="font-display text-2xl text-accent">2+</p>
                   <p className="text-sm text-ink3 font-body mt-1">
                     Years of Experience
                   </p>
@@ -123,15 +123,17 @@ export default function Home() {
 
                 {/* Stat Card 2 */}
                 <div className="bg-white border border-border rounded-2xl px-6 py-5 hover:border-accent transition-colors">
-                  <p className="font-display text-4xl text-accent">6</p>
+                  <p className="font-display text-2xl text-accent">
+                    Electrical and Electronics Engineering
+                  </p>
                   <p className="text-sm text-ink3 font-body mt-1">
-                    Websites Built
+                    KLS Gogte Institute of Technology
                   </p>
                 </div>
 
                 {/* Stat Card 3 */}
                 <div className="bg-white border border-border rounded-2xl px-6 py-5 hover:border-accent transition-colors">
-                  <p className="font-display text-4xl text-accent">MBA</p>
+                  <p className="font-display text-2xl text-accent">MBA</p>
                   <p className="text-sm text-ink3 font-body mt-1">
                     @ PES University Bengaluru
                   </p>

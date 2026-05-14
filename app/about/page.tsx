@@ -223,33 +223,68 @@ export default function AboutPage() {
           cards={[
             {
               image: publicFile("/images/travel/travel-1.jpg"),
-              title: "Travel",
-              caption: "Exploring India",
+              title: "Rann of Kutch",
+              caption: "White Desert Landscapes · Gujarat",
             },
             {
               image: publicFile("/images/travel/travel-2.jpg"),
-              title: "Travel",
-              caption: "Mountains & Treks",
+              title: "Tirupati Alipiri Mettu",
+              caption: "11 km Spiritual Trek to Tirumala",
             },
             {
               image: publicFile("/images/travel/travel-3.jpg"),
-              title: "Travel",
-              caption: "Coastal Karnataka",
+              title: "Ayodhya Ram Mandir",
+              caption: "Sacred Heritage & Temple Architecture",
             },
             {
               image: publicFile("/images/travel/travel-4.jpg"),
-              title: "Travel",
-              caption: "Heritage Sites",
+              title: "Prayagraj Kumbh Mela",
+              caption: "World's Largest Spiritual Gathering",
             },
             {
               image: publicFile("/images/travel/travel-5.jpg"),
-              title: "Travel",
-              caption: "Nature & Wildlife",
+              title: "Jodhpur, Rajasthan",
+              caption: "Blue City · Culture & Forts",
             },
             {
               image: publicFile("/images/travel/travel-6.jpg"),
-              title: "Travel",
-              caption: "City Walks",
+              title: "Jagannath Puri Rath Yatra",
+              caption: "Grand Chariot Festival Experience",
+            },
+            {
+              image: publicFile("/images/travel/travel-7.jpg"),
+              title: "Dwarkadhish Temple",
+              caption: "Sacred Krishna Temple · Gujarat",
+            },
+            {
+              image: publicFile("/images/travel/travel-8.jpg"),
+              title: "Statue of Unity",
+              caption: "World's Tallest Statue · Gujarat",
+            },
+            {
+              image: publicFile("/images/travel/travel-9.jpg"),
+              title: "Jagannath Puri Temple",
+              caption: "Spiritual Landmark of Odisha",
+            },
+            {
+              image: publicFile("/images/travel/travel-10.jpg"),
+              title: "Sun Temple, Modhera",
+              caption: "Ancient Solar Architecture · Gujarat",
+            },
+            {
+              image: publicFile("/images/travel/travel-11.jpg"),
+              title: "Thar Desert, Rajasthan",
+              caption: "Golden Sand Dunes & Desert Landscapes",
+            },
+            {
+              image: publicFile("/images/travel/travel-12.jpg"),
+              title: "Kodachadri Trek",
+              caption: "Western Ghats Adventure Trail",
+            },
+            {
+              image: publicFile("/images/travel/travel-13.jpg"),
+              title: "Rann of Kutch",
+              caption: "Endless White Salt Desert Experience",
             },
           ]}
         />
