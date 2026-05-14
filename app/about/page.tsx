@@ -41,71 +41,73 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 2: Bio + Achievement */}
+      {/* SECTION 2: Bio intro (full width) + Image & Achievement */}
       <section className="bg-white py-20 md:py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-            {/* LEFT: Photo */}
-            <div className="flex items-start">
+        {/* Intro: wider on desktop; inner measure keeps line length comfortable */}
+        <div className="mx-auto w-full max-w-7xl px-6">
+          <div className="max-w-6xl">
+            <SectionHeading title="Hi, I'm Saurabh" />
+
+            <div className="space-y-4 mt-6">
+            <p className="font-body text-base text-ink2 leading-relaxed">
+              I am an MBA (Marketing & Operations) student with a strong foundation
+              in technology, e-commerce, and digital business solutions, backed by
+              hands-on industry experience in UI/UX design, web development, quality
+              analysis, and e-commerce operations. My professional journey began in
+              the IT industry, where I developed practical expertise in user research,
+              interface design, website development, testing, and quality control.
+            </p>
+
+            <p className="font-body text-base text-ink2 leading-relaxed">
+              Currently, I am expanding my knowledge in marketing analytics, operations
+              management, and business strategy through my MBA while gaining real-world
+              exposure in e-commerce management and performance marketing. I have
+              experience working with Amazon Seller Central, Amazon Ads, Meta Ads,
+              Helium 10, and analytics tools to improve product visibility, customer
+              engagement, and operational efficiency.
+            </p>
+
+            <p className="font-body text-base text-ink2 leading-relaxed">
+              I enjoy combining creativity, technology, and data-driven thinking to
+              build impactful digital experiences and support business growth. Beyond
+              academics and work, I am passionate about travel, trekking, photography,
+              graphic design, video editing, and creating planted aquariums.
+            </p>
+          </div>
+          </div>
+        </div>
+
+        {/* Image + Achievement: balanced columns, natural image proportions */}
+        <div className="mx-auto w-full max-w-7xl px-6 mt-14 md:mt-16 lg:mt-20">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-10">
+            <div className="w-full overflow-hidden rounded-2xl border border-border bg-surface2">
               <Image
                 src={publicFile("/images/about-photo.jpg")}
+                alt="Saurabh Shanbhag"
                 width={480}
                 height={560}
-                alt="Saurabh Shanbhag"
-                className="object-cover rounded-2xl border border-border w-full"
+                className="h-auto w-full object-contain"
+                sizes="(min-width: 1024px) 40vw, 100vw"
               />
             </div>
 
-            {/* RIGHT: Bio */}
-            <div className="flex flex-col justify-start lg:pt-0 pt-10">
-              <SectionHeading title="Hi, I'm Saurabh" />
-
-              <div className="space-y-4 mt-6">
-                <p className="font-body text-base text-ink2 leading-relaxed">
-                  I am a first-year MBA student with areas of strength in IT
-                  with 2+ years of experience. Highly performance-driven
-                  professional in the field of UI/UX design and web development.
-                  I started my career as a junior developer in a startup where I
-                  sharpened my skills and gained active experience in UI/UX
-                  design and research, web development, quality control, and
-                  testing.
-                </p>
-
-                <p className="font-body text-base text-ink2 leading-relaxed">
-                  Through my MBA, I am expanding my skills in marketing,
-                  finance, and operations management. With my technical
-                  background, I help organisations make smarter data-driven
-                  decisions, improve processes, and drive sustainable growth.
-                </p>
-
-                <p className="font-body text-base text-ink2 leading-relaxed">
-                  Apart from studies and work, I love to travel and trek — I
-                  have covered most states of India and dream of completing a
-                  whole India tour in my 20s. My hobbies include designing
-                  planted aquariums, photography, graphic design, and video
-                  editing.
-                </p>
-              </div>
-
-              {/* Achievement card */}
-              <div className="bg-surface2 border border-border rounded-2xl p-6 mt-8">
-                <p className="text-xs uppercase tracking-widest text-accent mb-3">
-                  Achievement Highlight
-                </p>
-                <h3 className="font-display text-lg text-ink leading-snug">
-                  Coordinating Multi-Platform Media Delivery for a Mega Heritage
-                  Program
-                </h3>
-                <p className="font-body text-sm text-ink2 leading-relaxed mt-3">
-                  Served as part of the 20-member core media team for the
-                  550-year celebrations of Partagali Mutt — an 11-day national-level
-                  cultural event. Managed complete digital and on-ground media
-                  operations including reels, photography, vMix live sessions, and
-                  content coordination across YouTube, Instagram, Facebook, and
-                  WhatsApp. The event hosted Hon&apos;ble PM Narendra Modi, Shankar
-                  Mahadevan, Mahesh Kale, Maithili Thakur, and Niladri Kumar.
-                </p>
-              </div>
+            <div className="bg-surface2 border border-border rounded-2xl p-6">
+              <p className="text-xs uppercase tracking-widest text-accent mb-3">
+                Achievement Highlight
+              </p>
+              <h3 className="font-display text-lg text-ink leading-snug">
+                Coordinating Multi-Platform Media Delivery for a Mega Heritage
+                Program
+              </h3>
+              <p className="font-body text-sm text-ink2 leading-relaxed mt-3">
+                Served as part of the 20-member core media team for the
+                550-year celebrations of Partagali Mutt — an 11-day national-level
+                cultural event. Managed complete digital and on-ground media
+                operations including reels, photography, vMix live sessions, and
+                content coordination across YouTube, Instagram, Facebook, and
+                WhatsApp. The event hosted Hon&apos;ble PM Narendra Modi, Shankar
+                Mahadevan, Mahesh Kale, Maithili Thakur, and Niladri Kumar.
+              </p>
             </div>
           </div>
         </div>
