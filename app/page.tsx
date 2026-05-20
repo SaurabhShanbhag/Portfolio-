@@ -1,15 +1,10 @@
-import { Metadata } from "next";
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/SectionHeading";
 import { HorizontalCardScroller } from "@/components/HorizontalCardScroller";
 import { publicFile } from "@/lib/siteBasePath";
-
-export const metadata: Metadata = {
-  title: "Saurabh Shanbhag — Portfolio",
-  description:
-    "MBA Student, UI/UX Designer & Web Developer based in Bengaluru",
-};
 
 export default function Home() {
   return (
@@ -42,12 +37,20 @@ export default function Home() {
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4 mt-8 animate-fade-up animate-delay-400">
-                <Link
-                  href="/#work"
-                  className="bg-accent text-white px-8 py-3 rounded-full text-sm font-body font-medium hover:bg-accentHover transition-colors duration-200"
+                <button
+                  onClick={() => {
+                    const section = document.getElementById('work');
+                    if (section) {
+                      section.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                      });
+                    }
+                  }}
+                  className="bg-accent text-white px-8 py-3 rounded-full text-sm font-body font-medium hover:bg-accentHover transition-colors duration-200 cursor-pointer"
                 >
                   View My Work
-                </Link>
+                </button>
                 <Link
                   href="/about"
                   className="border-[1.5px] border-ink text-ink px-8 py-3 rounded-full text-sm font-body font-medium hover:border-accent hover:text-accent transition-colors duration-200"
