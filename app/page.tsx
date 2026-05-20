@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/SectionHeading";
 import { HorizontalCardScroller } from "@/components/HorizontalCardScroller";
+import { FeaturedProjectCard } from "@/components/FeaturedProjectCard";
 import { publicFile } from "@/lib/siteBasePath";
 
 export default function Home() {
@@ -366,6 +367,38 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* SECTION 3.5: Featured Internship Project */}
+      <section className="bg-surface py-16 md:py-20 lg:py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mb-12">
+            <SectionHeading title="Featured Internship Project" />
+          </div>
+
+          <FeaturedProjectCard
+            title="Amazon Marketplace Optimization & Sales Performance Analysis"
+            description="Worked on a real-time e-commerce optimization project for Arvind Industries, focusing on improving product visibility, conversion rate, and sales performance on Amazon. The project involved keyword research, competitor analysis, campaign optimization, listing enhancement, and data-driven performance analysis for 170+ products across the Embassy and Trisara brands."
+            highlights={[
+              "Keyword Research & Competitor Analysis",
+              "Amazon Advertising Optimization",
+              "A+ Content & Listing Enhancement",
+              "Campaign & ASIN Performance Analysis",
+              "Correlation & Regression Analysis",
+              "Lifestyle & Infographic Content Creation",
+            ]}
+            tools={["Amazon Ads", "Helium 10", "Microsoft Excel", "JMP"]}
+            outcomes={[
+              "Improved ROAS from 18% to 20%",
+              "Sales increased from ₹2.11L to ₹2.90L",
+              "Identified high-performing keywords and campaigns",
+              "Enhanced conversion through optimized listings",
+            ]}
+            imageUrl={publicFile("/projects/amazon-project/cover-image.jpg")}
+            caseStudyLink="/projects/amazon-marketplace-optimization"
+            primaryCtaLabel="View Project"
+          />
         </div>
       </section>
 
