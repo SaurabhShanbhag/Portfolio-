@@ -18,7 +18,7 @@ export default function ContactPage() {
     { x: 0, y: 0 },
   ]);
   const containerRef = useRef<HTMLDivElement>(null);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | null>(null);
 
   useEffect(() => {
     // Only enable cursor tracking on desktop (md breakpoint and up)
