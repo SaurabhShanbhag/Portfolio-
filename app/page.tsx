@@ -367,7 +367,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 4: Work */}
-      <section id="work" className="bg-white py-16 md:py-20">
+      <section id="work" className="bg-white py-16 md:py-20 scroll-mt-[100px]">
         <div className="mx-auto mb-8 max-w-6xl px-6 md:mb-10">
           <SectionHeading
             title="My Work"
