@@ -91,13 +91,13 @@ export function Header() {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="absolute left-0 right-0 top-full z-40 w-full glass-nav border-t border-border lg:hidden">
+        <div className="absolute left-0 right-0 top-full z-40 w-full glass-nav border-t border-border lg:hidden flex flex-col items-center">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block border-b border-border px-6 py-4 text-center text-sm font-body tracking-wide text-ink2 transition-colors hover:text-accent"
+              className="w-full border-b border-border px-6 py-4 text-center text-sm font-body tracking-wide text-ink2 transition-colors hover:text-accent"
             >
               {link.label}
             </Link>
@@ -109,7 +109,7 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="m-3 inline-block rounded-full border-[1.5px] border-accent px-4 py-1.5 text-center text-xs tracking-wide text-accent transition-all duration-200 hover:bg-accent hover:text-white"
+            className="my-3 rounded-full border-[1.5px] border-accent px-4 py-1.5 text-center text-xs tracking-wide text-accent transition-all duration-200 hover:bg-accent hover:text-white"
           >
             Resume
           </Link>
