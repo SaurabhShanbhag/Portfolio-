@@ -27,7 +27,7 @@ export default function AboutPage() {
           </p>
 
           <p className="font-body text-base text-ink2 mt-6 max-w-2xl mx-auto leading-relaxed">
-            MBA student with 2+ years in UI/UX design and web development,
+            MBA graduate with 2+ years in UI/UX design and web development,
             bridging technology and business strategy to drive growth and create
             meaningful, lasting impact.
           </p>
@@ -50,7 +50,7 @@ export default function AboutPage() {
 
             <div className="space-y-4 mt-6">
             <p className="font-body text-base text-ink2 leading-relaxed">
-              I am an MBA (Marketing & Operations) student with a strong foundation
+              I am an MBA (Marketing & Operations) graduate with a strong foundation
               in technology, e-commerce, and digital business solutions, backed by
               hands-on industry experience in UI/UX design, web development, quality
               analysis, and e-commerce operations. My professional journey began in
@@ -120,7 +120,22 @@ export default function AboutPage() {
 
           <div className="mt-12">
             <TimelineItem
-              period="Feb 2026 – Present"
+              period="Jul 2026 – Present"
+              title="Assistant Store Manager"
+              org="Blinkit"
+              location="Bengaluru, India"
+              bullets={[
+                "Managed inventory operations to ensure stock accuracy, availability, and minimal shrinkage",
+                "Supervised manpower planning for 20+ Store Captains and 30+ Delivery Partners, ensuring optimal workforce utilization and preparing weekly rosters to match operational demand",
+                "Coordinated consignment processing and managed daily logistics load arrivals for smooth store operations",
+                "Executed operational tasks while consistently meeting KPIs and KRAs",
+                "Ensured customer orders were fulfilled and delivered within SLA through effective coordination between store and delivery teams",
+                "Monitored day-to-day store performance and resolved operational bottlenecks to maintain service quality",
+              ]}
+            />
+
+            <TimelineItem
+              period="Feb 2026 – Jun 2026"
               title="Marketing & Operations Intern"
               org="Arvind Industries"
               location="Bengaluru, India"

@@ -29,7 +29,7 @@ export default function Home() {
               </h1>
 
               <p className="font-display italic text-xl text-ink2 mt-5 animate-fade-up animate-delay-200">
-                MBA Student · E-commerce & Growth Analyst · UI/UX Designer · Web Developer · Quality Control Analyst
+                MBA Graduate · E-commerce & Growth Analyst · UI/UX Designer · Web Developer · Quality Control Analyst
               </p>
 
               <p className="font-body text-base text-ink3 mt-4 max-w-md leading-relaxed animate-fade-up animate-delay-300">
@@ -101,7 +101,7 @@ export default function Home() {
               <SectionHeading title="About Me" />
 
               <p className="font-body text-base text-ink2 leading-relaxed mt-6 max-w-prose">
-                A tech-savvy MBA student with 2+ years in UI/UX design and web
+                A tech-savvy MBA graduate with 2+ years in UI/UX design and web
                 development. I bridge technology and business strategy to drive
                 growth and create meaningful user experiences.
               </p>
@@ -148,8 +148,58 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 3: Featured Certifications */}
+      {/* SECTION 3: Awards & Achievements */}
       <section className="bg-white py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <SectionHeading
+            title="Awards & Achievements"
+            subtitle="Recognition for academic excellence and professional accomplishments"
+          />
+
+          <div className="mt-12 grid grid-cols-1 items-stretch gap-6 lg:mt-14 lg:grid-cols-1 lg:gap-8">
+            {/* Award 1: Prof. C N R Rao Merit Scholarship */}
+            <div className="group flex h-full min-h-0 cursor-pointer flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-accent">
+              <div className="relative aspect-[4/3] overflow-hidden bg-surface2">
+                <Image
+                  src={publicFile("/images/certifications/awardone.jpg")}
+                  alt="Prof. C N R Rao Merit Scholarship"
+                  fill
+                  className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                />
+              </div>
+              <div className="p-5 flex flex-col justify-between flex-1">
+                <div>
+                  <h3 className="font-display text-lg text-ink leading-snug">
+                    Prof. C N R Rao Merit Scholarship
+                  </h3>
+                  <p className="text-sm text-ink3 mt-2 font-body">
+                    PES University MBA Programme
+                  </p>
+                  <p className="text-sm text-ink2 mt-4 font-body leading-relaxed">
+                    I am extremely grateful to share that I have once again been awarded the Prof. C N R Rao Merit Scholarship by PES University for my academic performance in the 3rd trimester of my MBA programme, securing an SGPA of 9.45 and placing among the top 25% performers of the cohort.
+                  </p>
+                </div>
+                <div className="mt-4 inline-flex items-center gap-2 text-accent text-xs font-medium w-fit">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  Award of Excellence
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4: Featured Certifications */}
+      <section className="bg-surface py-20 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <SectionHeading
             title="Featured Certifications"
@@ -370,7 +420,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 3.5: Featured Internship Project */}
+      {/* SECTION 5: Featured Internship Project */}
       <section className="bg-surface py-16 md:py-20 lg:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mb-12">
@@ -402,7 +452,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 4: Work */}
+      {/* SECTION 6: Work */}
       <section id="work" className="bg-white py-16 md:py-20 scroll-mt-[100px]">
         <div className="mx-auto mb-8 max-w-6xl px-6 md:mb-10">
           <SectionHeading
@@ -460,7 +510,7 @@ export default function Home() {
         />
       </section>
 
-      {/* SECTION 5: Posters & Designs */}
+      {/* SECTION 7: Posters & Designs */}
       <section id="posters" className="bg-surface py-16 md:py-20">
         <div className="mx-auto mb-8 max-w-6xl px-6 md:mb-10">
           <SectionHeading

@@ -36,10 +36,12 @@ export function TimelineItem({
 
         {/* Content */}
         <div className="flex-1 pt-1">
-          <h3 className="font-display text-lg text-ink">{title}</h3>
-          <p className="text-sm text-ink2 mt-1">
-            {org} · {location}
-          </p>
+          <div className="flex items-center gap-x-2 gap-y-1 whitespace-nowrap overflow-hidden">
+            <h3 className="font-display text-lg text-ink truncate">{title}</h3>
+            <span className="text-ink3 flex-shrink-0">|</span>
+            <p className="text-sm text-ink2 truncate">{org}</p>
+          </div>
+          <p className="text-sm text-ink2 mt-1">{location}</p>
           {bullets && bullets.length > 0 && (
             <ul className="text-sm text-ink2 leading-relaxed mt-3 space-y-1 list-disc list-inside">
               {bullets.map((bullet, idx) => (
@@ -52,13 +54,12 @@ export function TimelineItem({
 
       {/* Mobile layout */}
       <div className="md:hidden border border-border rounded-xl p-5 mb-4">
-        <p className="text-xs text-accent uppercase tracking-wider mb-2">
-          {period}
-        </p>
-        <h3 className="font-display text-base text-ink">{title}</h3>
-        <p className="text-sm text-ink2 mt-1">
-          {org} · {location}
-        </p>
+        <div className="flex items-center gap-x-2 gap-y-1 text-sm whitespace-nowrap overflow-hidden">
+          <span className="font-display text-base text-ink truncate">{title}</span>
+          <span className="text-ink3 flex-shrink-0">|</span>
+          <span className="text-ink2 truncate">{org}</span>
+        </div>
+        <p className="text-sm text-ink2 mt-2">{location}</p>
         {bullets && bullets.length > 0 && (
           <ul className="text-sm text-ink2 leading-relaxed mt-3 space-y-1 list-disc list-inside">
             {bullets.map((bullet, idx) => (

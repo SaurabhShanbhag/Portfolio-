@@ -21,7 +21,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Saurabh Shanbhag — Portfolio",
   description:
-    "MBA Student, UI/UX Designer & Web Developer based in Bengaluru",
+    "MBA Graduate, UI/UX Designer & Web Developer based in Bengaluru",
 };
 
 export default function RootLayout({
