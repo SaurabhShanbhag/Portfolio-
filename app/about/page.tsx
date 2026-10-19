@@ -187,7 +187,7 @@ export default function AboutPage() {
 
           <div className="mt-12">
             <TimelineItem
-              period="Dec 2024 – Present"
+              period="Dec 2024 – Jul 2026"
               title="Master of Business Administration"
               org="PES University"
               location="Bengaluru, India"
